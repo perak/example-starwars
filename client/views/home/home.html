@@ -1,0 +1,36 @@
+<template name="Home">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HomeRestCall}}
+	</div>
+</template>
+
+<template name="HomeRestCall">
+	<form>
+		<h1>
+			Example REST request
+		</h1>
+		<div class="form-group">
+			<label for="params">
+				URL params
+			</label>
+			<input type="text" class="form-control" name="params" value="people/1/">
+		</div>
+		<button type="button" class="btn btn-success client-request">
+			Request from client
+		</button>
+		<button type="button" class="btn btn-primary server-request">
+			Request from server
+		</button>
+	</form>
+	<br />	<pre>
+		<code class="result">
+		</code>
+	</pre>
+</template>
+

@@ -66,7 +66,7 @@ Template.HomeRestCall.events({
 		// animate loading
 		$(template.find(".server-request")).button("loading");
 
-		// HTTP call
+		// Call server method (HTTP call is executed server-side and result returned here)
 		Meteor.call("starWars", params, function(err, res){
 			// stop animating loading
 			$(template.find(".server-request")).button("reset");
